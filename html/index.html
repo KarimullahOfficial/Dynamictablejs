@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic table using javascript</title>
+    <link rel="stylesheet" href="../css/all.min.css" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <section class="wrapper">
+      <div class="container">
+        <h3 class="text-dark fw-bolder fs-4 text-center">
+          Create Your Account
+        </h3>
+
+        <div class="input-group flex-nowrap mt-5">
+          <span class="input-group-text" id="addon-wrapping "
+            ><i class="fa-solid fa-user"></i>
+          </span>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Username"
+            aria-label="Username"
+            aria-describedby="addon-wrapping"
+            id="textname"
+          />
+        </div>
+        <div class="input-group flex-nowrap mt-5">
+          <span class="input-group-text" id="addon-wrapping"
+            ><i class="fa-solid fa-envelope"></i
+          ></span>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Email"
+            aria-label="Email"
+            aria-describedby="addon-wrapping"
+            id="emailname"
+          />
+        </div>
+
+        <div class="input-group flex-nowrap mt-5">
+          <span class="input-group-text" id="addon-wrapping">
+            <i class="fa-solid fa-calendar"></i>
+          </span>
+          <input
+            type="date"
+            class="form-control"
+            placeholder="Date of Birth"
+            aria-label="Date"
+            aria-describedby="addon-wrapping"
+            id="dateofbirth"
+          />
+        </div>
+        <div class="input-group flex-nowrap mt-5">
+          <span class="input-group-text" id="addon-wrapping"
+            ><i class="fa-solid fa-address-book"></i
+          ></span>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Address"
+            aria-label="Address"
+            aria-describedby="addon-wrapping"
+            id="address"
+          />
+        </div>
+
+        <div class="input-group flex-nowrap mt-5">
+          <span class="input-group-text" id="addon-wrapping"
+            ><i class="fa-solid fa-lock"></i
+          ></span>
+          <input
+            type="password"
+            class="form-control"
+            placeholder="Enter Password"
+            aria-label="Password"
+            aria-describedby="addon-wrapping"
+            id="password"
+          />
+        </div>
+        <div class="input-group flex-nowrap mt-5">
+          <span class="input-group-text" id="addon-wrapping"
+            ><i class="fa-solid fa-lock"></i
+          ></span>
+          <input
+            type="password"
+            class="form-control"
+            placeholder="Confirm Password"
+            aria-label="Password"
+            aria-describedby="addon-wrapping"
+            id="passwordnameone"
+          />
+        </div>
+
+        <div
+          class="btn btn-primary w-25 m-auto mt-4 d-flex justify-content-center"
+          onclick="insert()"
+        >
+          Submit
+        </div>
+        <div class="detail text-center mt-5">
+          <h4>Detail</h4>
+        </div>
+        <table class="table border-dark table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">Username</th>
+              <th scope="col">Email</th>
+              <th scope="col">DateofBirth</th>
+              <th scope="col">Password</th>
+              <th scope="col">ConfirmPassword</th>
+              <th scope="col">Address</th>
+            </tr>
+          </thead>
+          <tbody id="tablletext"></tbody>
+        </table>
+      </div>
+    </section>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/font.js"></script>
+    <script type="text/javascript" src="../js/main.js"></script>
+    <script type="text/javascript" src="../js/popper.min.js"></script>
+
+    <script src="../js/swiper-bundle.esm.browser.min.js"></script>
+  </body>
+</html>
