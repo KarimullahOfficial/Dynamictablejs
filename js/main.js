@@ -7,7 +7,9 @@ function insert() {
   var Adrassnam = document.getElementById("address").value;
   var passsward = document.getElementById("password").value;
   var pasone = document.getElementById("passwordnameone").value;
-  var table = `<tr>
+
+  if (Validate(Textnam, emailNam, dateofBir, Adrassnam, passsward, pasone)) {
+    var table = `<tr>
 <td>${Textnam}</td>
 <td>${emailNam}</td>
 <td>${dateofBir}</td>
@@ -15,5 +17,33 @@ function insert() {
 <td>${pasone}</td>
 <td>${Adrassnam}</td>
 </tr>`;
-  document.getElementById("tablletext").innerHTML += table;
+    document.getElementById("tablletext").innerHTML += table;
+    alertMessage(
+      "Success",
+      "Result has been calculated successfully.",
+      "successfullt!"
+    );
+  }
+}
+function Validate(Textnam, emailNam, dateofBir, Adrassnam, passsward, pasone) {
+  if (Textnam == "") {
+    alertMessage("Error", "Please enter User", " * Name");
+  } else if (emailNam == "") {
+    alertMessage("Error", "Please enter Your Email", " * Email");
+  } else if (dateofBir == "") {
+    alertMessage("Error", "Please enter Dateofbirth", " *Date Of Birth ");
+  } else if (Adrassnam == "") {
+    alertMessage("Error", "Please enter Dateofbirth", " *Address");
+  } else if (passsward === "") {
+    alertMessage("Error", "Please enter Dateofbirth", " *Password");
+  } else if (pasone === "") {
+    alertMessage("Error", "Please enter Dateofbirth", " *ConfirmPassword");
+  } else {
+    return Textnam, emailNam, dateofBir, Adrassnam, passsward, pasone;
+  }
+}
+function alertMessage(typeError, messageError, reasonError) {
+  var Type = (document.getElementById("type").innerHTML = typeError);
+  let message = (document.getElementById("message").innerHTML = messageError);
+  let reason = (document.getElementById("reason").innerHTML = reasonError);
 }
