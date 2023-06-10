@@ -21,7 +21,7 @@ function insert() {
     alertMessage(
       "Success",
       "Result has been calculated successfully.",
-      "successfullt!"
+      "successfully!"
     );
   }
 }
@@ -33,11 +33,11 @@ function Validate(Textnam, emailNam, dateofBir, Adrassnam, passsward, pasone) {
   } else if (dateofBir == "") {
     alertMessage("Error", "Please enter Dateofbirth", " *Date Of Birth ");
   } else if (Adrassnam == "") {
-    alertMessage("Error", "Please enter Dateofbirth", " *Address");
+    alertMessage("Error", "Please enter Address", " *Address");
   } else if (passsward === "") {
-    alertMessage("Error", "Please enter Dateofbirth", " *Password");
+    alertMessage("Error", "Please enter Password", " *Password");
   } else if (pasone === "") {
-    alertMessage("Error", "Please enter Dateofbirth", " *ConfirmPassword");
+    alertMessage("Error", "Please enter ConfirmPassword", " *ConfirmPassword");
   } else {
     return Textnam, emailNam, dateofBir, Adrassnam, passsward, pasone;
   }
